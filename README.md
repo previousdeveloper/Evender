@@ -1,6 +1,6 @@
 # Evender
 
-Evender is  events provider which gets  different events website.
+Evender is a events provider which gets  different events website.
 
 
 ### Usage
@@ -29,3 +29,11 @@ Evender is  events provider which gets  different events website.
 ```xml
  localhost:8080/zorluevent
 ```
+
+### Resource Website
+
+[Etkinliktakvimi](http://etkinliktakvimi.org/)
+
+[ZorluCenter](http://www.zorlucenterpsm.com)
+
+[Etkinlik](http://www.etkinlik.com.tr/)
