@@ -16,7 +16,9 @@ import static spark.Spark.get;
  */
 public class EventController {
 
-    public EventController(IEventComService eventComService, IEventCalendarComService eventCalendarCom, IZorluCenterService zorluCenter) {
+    public EventController(IEventComService eventComService,
+                           IEventCalendarComService eventCalendarCom,
+                           IZorluCenterService zorluCenter) {
 
         new ServerConfiguration();
 

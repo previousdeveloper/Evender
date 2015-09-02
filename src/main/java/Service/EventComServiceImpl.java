@@ -1,6 +1,5 @@
 package Service;
 
-import Cache.CacheStore;
 import Interface.IEventComService;
 import Model.EventModel;
 import org.jsoup.Jsoup;
@@ -10,7 +9,6 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by previousdeveloper on 1.09.2015.
@@ -51,8 +49,6 @@ public class EventComServiceImpl implements IEventComService {
             e.printStackTrace();
         }
 
-        Map<Object, Object> objectObjectMap = CacheStore.makeMap(100);
-        objectObjectMap.put("key",result);
 
         return result;
     }

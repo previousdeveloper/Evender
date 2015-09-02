@@ -8,7 +8,7 @@ import static spark.SparkBase.threadPool;
  */
 public class ServerConfiguration {
     public ServerConfiguration() {
-        int maxThreads = 100;
+        int maxThreads = 200;
         int minThreads = 20;
         int timeOutMillis = 30000;
         threadPool(maxThreads, minThreads, timeOutMillis);
@@ -16,3 +16,5 @@ public class ServerConfiguration {
         port(8080);
     }
 }
+
+

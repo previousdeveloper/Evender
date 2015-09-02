@@ -13,7 +13,7 @@ import java.util.Hashtable;
 /**
  * Created by previousdeveloper on 2.09.2015.
  */
-public class IZorluCenterServiceImpl implements IZorluCenterService {
+public class ZorluCenterServiceImpl implements IZorluCenterService {
     @Override
     public Dictionary<String, Object> getAllEvent() {
         Document doc = null;
