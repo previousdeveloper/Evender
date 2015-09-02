@@ -1,7 +1,7 @@
 import Controller.EventController;
-import Service.EventCalendarComImpl;
+import Service.EventCalendarComServiceImpl;
 import Service.EventComServiceImpl;
-import Service.IZorluCenterImpl;
+import Service.IZorluCenterServiceImpl;
 
 /**
  * Created by previousdeveloper on 1.09.2015.
@@ -12,8 +12,7 @@ public class Server {
 
     public static void main(String[] args) {
 
-
-        new EventController(new EventComServiceImpl(),new EventCalendarComImpl(),new IZorluCenterImpl());
+        new EventController(new EventComServiceImpl(), new EventCalendarComServiceImpl(), new IZorluCenterServiceImpl());
     }
 
 

@@ -1,11 +1,13 @@
 package Controller;
 
-import Service.IEventCalendarCom;
-import Service.IEventComService;
-import Service.IZorluCenter;
+import Interface.IEventCalendarComService;
+import Interface.IEventComService;
+import Interface.IZorluCenterService;
+import Model.EventModel;
 import Util.JsonTransformer;
 
 import java.util.Dictionary;
+import java.util.List;
 
 import static spark.Spark.get;
 
@@ -14,13 +16,13 @@ import static spark.Spark.get;
  */
 public class EventController {
 
-    public EventController(IEventComService eventComService, IEventCalendarCom eventCalendarCom, IZorluCenter zorluCenter) {
+    public EventController(IEventComService eventComService, IEventCalendarComService eventCalendarCom, IZorluCenterService zorluCenter) {
 
         new ServerConfiguration();
 
         get("/city/:city", "application/json", (request, response) -> {
             String reqCity = request.params(":city");
-            Dictionary<String, Object> result = eventComService.getByCity(reqCity);
+            List<EventModel> result = eventComService.getByCity(reqCity);
 
             if (result == null) {
                 response.status(404);
@@ -32,7 +34,7 @@ public class EventController {
 
         get("/event", "application/json", (request, response) -> {
 
-            Dictionary<String, Object> result = eventCalendarCom.getAllEvent();
+            List<EventModel> result = eventCalendarCom.getAllEvent();
 
             if (result == null) {
 

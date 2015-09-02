@@ -1,6 +1,6 @@
 package Service;
 
-import Const.Constant;
+import Interface.IZorluCenterService;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -13,7 +13,7 @@ import java.util.Hashtable;
 /**
  * Created by previousdeveloper on 2.09.2015.
  */
-public class IZorluCenterImpl implements IZorluCenter {
+public class IZorluCenterServiceImpl implements IZorluCenterService {
     @Override
     public Dictionary<String, Object> getAllEvent() {
         Document doc = null;
