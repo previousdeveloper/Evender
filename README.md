@@ -5,9 +5,12 @@ Evender is a events provider which gets  different events website.
 
 ### Usage
 
+Note: Install Java 8.
+
 1. Import project into any IDE.
 
 2. Run **Server** (Evender runs on an embedded Jetty web server)
+
 
 
 ### TESTING
